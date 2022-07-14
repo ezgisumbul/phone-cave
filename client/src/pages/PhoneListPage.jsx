@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import PhoneList from '../components/PhoneList';
+import PhoneSinglePage from '../components/PhoneSinglePage';
 import { loadPhones } from '../services/phone';
 
 const PhoneListPage = () => {
   const [phones, setPhones] = useState(null);
+
   useEffect(() => {
     loadPhones().then((phones) => {
       console.log(phones);
@@ -19,7 +22,7 @@ const PhoneListPage = () => {
         {phones &&
           phones.map((phone) => (
             <li key={phone.id}>
-              <Link to={`/phones/${phone.id}`}>{phone.name}</Link>
+              <PhoneList phoneId={phone.id} phone={phone} />
             </li>
           ))}
       </ul>

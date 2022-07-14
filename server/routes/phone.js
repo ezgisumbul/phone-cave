@@ -11,8 +11,11 @@ router.get('/', (req, res, next) => {
 
 router.get('/:id', (req, res, next) => {
   const { id } = req.params;
-  Phones.findById(id)
-    .then((phone) => res.json({ phone }))
+  Phones.findOne({ id: id })
+    .then(
+      (phone) => res.json({ phone })
+      //   console.log(phone)
+    )
     .catch((err) => next(err));
 });
 
