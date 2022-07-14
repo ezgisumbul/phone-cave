@@ -1,8 +1,7 @@
-import './App.css';
+import './App.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
+
 import PhoneListPage from './pages/PhoneListPage';
-import PhoneSinglePage from './components/PhoneSinglePage';
 
 function App() {
   return (
@@ -10,8 +9,7 @@ function App() {
       <header className="App-header">
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/phones" element={<PhoneListPage />} />
+            <Route path="/" element={<PhoneListPage />} />
           </Routes>
         </BrowserRouter>
       </header>

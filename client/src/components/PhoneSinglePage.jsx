@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { loadSinglePhone } from '../services/phone';
+import './PhoneSinglePage.scss';
 
 const PhoneSinglePage = ({ phoneId }) => {
   const [phone, setPhone] = useState(null);
@@ -16,11 +17,9 @@ const PhoneSinglePage = ({ phoneId }) => {
   }, [phoneId]);
 
   return (
-    <div>
-      <h1>SINGLE Phone</h1>
+    <div className="phone-list">
       {phone && (
-        <div>
-          <h1>{phone.name}</h1>
+        <div className="phone-details">
           <img src={`/images/${phone.imageFileName}`} alt={phone.name} />
           <p>
             <b>Description: </b>

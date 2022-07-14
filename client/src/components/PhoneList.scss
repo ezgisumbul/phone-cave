@@ -1,0 +1,26 @@
+.phone-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  img {
+    width: 20rem;
+  }
+  .phone-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+  }
+  button {
+    border: 1px solid #dadada;
+    background-color: rgb(137, 106, 209);
+    color: white;
+    height: 2rem;
+    width: 6rem;
+  }
+  h2 {
+    font-weight: 300;
+  }
+}

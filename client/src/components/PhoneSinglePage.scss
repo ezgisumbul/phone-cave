@@ -1,0 +1,10 @@
+.phone-list {
+  margin: 0;
+  .phone-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: start;
+  }
+}
